@@ -28,7 +28,7 @@ const navItems: NavItem[] = [
 ];
 
 const additionalLinks: { label: string; href: string }[] = [
-  { label: 'Press & Media', href: '/press' },
+  { label: 'Newsroom', href: '/press' },
   { label: 'Publications', href: '/publications' },
   { label: 'Apps', href: '/apps' }
 ];

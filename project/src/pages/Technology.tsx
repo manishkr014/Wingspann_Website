@@ -1,3 +1,5 @@
+import { Navigation, Brain, Cpu, Battery, Zap } from 'lucide-react';
+
 export default function TechnologyPage() {
   const products = [
     {
@@ -133,14 +135,26 @@ export default function TechnologyPage() {
                   {/* Left Side: Always Visible Key Features */}
                   <div className="flex-1 w-full lg:w-auto">
                     <h3 className="text-2xl font-bold text-white tracking-wider uppercase mb-6">Key Features</h3>
-                    <ul className="grid sm:grid-cols-2 gap-4 md:gap-6">
-                      {product.features.map((feature, fIdx) => (
-                        <li key={fIdx} className="flex items-center gap-3 text-gray-300 text-base md:text-lg">
-                          <span className="w-2 h-2 bg-red-600 rounded-full shadow-[0_0_8px_rgba(220,38,38,0.8)]"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-4">
+                      {product.features.map((feature, fIdx) => {
+                        let Icon = Zap;
+                        if (feature.includes("Autonomous")) Icon = Navigation;
+                        else if (feature.includes("AI-powered")) Icon = Brain;
+                        else if (feature.includes("Real-time")) Icon = Cpu;
+                        else if (feature.includes("endurance")) Icon = Battery;
+
+                        return (
+                          <div key={fIdx} className="bg-gradient-to-br from-gray-900 to-[#0a0a0a] rounded-lg p-5 flex flex-col items-center justify-center text-center shadow-md hover:shadow-red-900/20 hover:-translate-y-1 transition-all duration-300 border border-gray-800 hover:border-red-600/50 group">
+                            <div className="transform group-hover:scale-110 transition-transform duration-300 text-gray-500 group-hover:text-red-500">
+                              <Icon className="w-8 h-8 mb-3 stroke-[1.5]" />
+                            </div>
+                            <h4 className="font-medium text-gray-300 text-xs sm:text-[13px] leading-relaxed group-hover:text-white transition-colors">
+                              {feature}
+                            </h4>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
 
                   {/* Right Side: Hover Trigger for Product Details */}

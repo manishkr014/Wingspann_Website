@@ -20,11 +20,11 @@ export default function Contact() {
       <div className="relative z-10 w-full mx-4 md:mx-0 md:w-[550px] lg:w-[650px] bg-[#2A2925] p-8 sm:p-10 md:p-14 md:ml-auto md:mr-10 lg:mr-24 border-l-4 border-red-600 shadow-2xl flex flex-col justify-center">
 
         <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-white font-medium mb-6 leading-[1.3] text-shadow">
-          We offer a career at the forefront of technology, in a challenging and everchanging environment where all share one common goal – to redefine aerospace.
+          Pioneer the next generation of autonomous flight in an environment built for those who thrive on complex engineering challenges.
         </h2>
 
         <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-8 sm:mb-10 font-light">
-          Be part of the team redefining aerospace. Connect with us to explore partnerships and collaboration opportunities.
+          Collaborate with forward-thinking professionals dedicated to pushing the limits of technology. Discover roles that empower you to grow, innovate, and make a lasting impact on the aerospace industry.
         </p>
 
         <div>

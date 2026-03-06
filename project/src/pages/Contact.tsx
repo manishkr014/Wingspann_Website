@@ -37,7 +37,7 @@ export default function ContactPage() {
     } else if (
       formData.inquiryType === "Partnership & MoU" ||
       formData.inquiryType === "Technical"
-    ) { 
+    ) {
       targetEmail = "d.sengupta@wingspannglobal.com";
     }
 
@@ -196,7 +196,7 @@ export default function ContactPage() {
               <option>Careers</option>
               <option>Vendor</option>
               <option>Technical</option>
-              <option>Press & Media</option>
+              <option>Newsroom</option>
               <option>After Sales & Support</option>
             </select>
             <input
@@ -257,13 +257,24 @@ export default function ContactPage() {
 
               <iframe
                 title="Wingspann Global Headquarters"
-                src="https://maps.google.com/maps?q=Plot%202%20%26%203,%20 Gut%20No.%2053,%20Shajapur,%20MIDC%20Waluj,%20Chh.%20Sambhajinagar,%20Maharashtra%20431136&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=19.8640409,75.221675&t=&z=18&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 loading="lazy"
                 allowFullScreen
                 className="border-0 w-full h-full filter invert-[90%] hue-rotate-[180deg] grayscale-[20%] contrast-[120%] opacity-70 group-hover:opacity-100 group-hover:invert-0 group-hover:hue-rotate-0 group-hover:grayscale-0 group-hover:contrast-100 transition-all duration-[1000ms]"
               ></iframe>
+
+              {/* Clickable map overlay */}
+              <a
+                href="https://www.google.com/maps/place/WINGSPANN+GLOBAL+PVT+LTD/@19.8640447,75.2215808,54m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3bdb9b00692c06cd:0x945bbb9b79958c51!2sWINGSPANN+GLOBAL+PVT+LTD!8m2!3d19.8640409!4d75.221675!16s%2Fg%2F11z1pm8yrl!3m5!1s0x3bdb9b00692c06cd:0x945bbb9b79958c51!8m2!3d19.8640409!4d75.221675!16s%2Fg%2F11z1pm8yrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 z-10 cursor-pointer"
+                title="Open Location in Google Maps"
+              >
+                <span className="sr-only">Open Wingspann Global location in Google Maps</span>
+              </a>
 
               {/* Interactive overlay card that appears on hover */}
               <div className="absolute bottom-8 left-8 bg-black/90 backdrop-blur-md border border-red-600/50 p-4 rounded-sm z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none">
@@ -272,7 +283,7 @@ export default function ContactPage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
                   </span>
-                  <p className="text-white text-xs sm:text-sm font-bold tracking-widest uppercase">Live Tracking: HQ</p>
+                  <p className="text-white text-xs sm:text-sm font-bold tracking-widest uppercase">Live Tracking: HQ 📍</p>
                 </div>
               </div>
             </div>

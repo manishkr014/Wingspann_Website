@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Component, Rocket, Brain, Target } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 
@@ -83,41 +83,77 @@ export default function About() {
                 </motion.div>
               </div>
 
-              {/* Key Focus Areas pushed to next scroll section */}
+              {/* Why Choose Section */}
+              <div className="w-full mt-24 mb-6 text-center">
+                <h2 className="text-3xl md:text-5xl font-black mb-6 text-white tracking-wide uppercase">
+                  WHY CHOOSE WINGSPANN?
+                </h2>
+                <p className="text-base md:text-lg text-gray-300 max-w-5xl mx-auto font-light leading-relaxed">
+                  At wsgpl Aerospace, we're not just drone manufacturers — we're partners in innovation and success. Here's why Wingspann stands out in the drone industry.
+                </p>
+              </div>
+
+              {/* Key Focus Areas Card Grid */}
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ margin: "-50px" }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                className="max-w-5xl mx-auto w-full group cursor-default transition-all duration-300 mt-12"
+                className="max-w-6xl mx-auto w-full mt-0 mb-20"
               >
-                <div className="flex flex-col items-center md:items-start mb-10">
-                  <div className="w-8 h-[2px] bg-gray-500 mb-6"></div>
+                <div className="flex flex-col items-center mb-10">
                   <div className="flex items-center gap-3">
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-wide text-white uppercase">
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-wide text-white uppercase text-center">
                       KEY <span className="text-red-700">FOCUS AREAS</span>
                     </h2>
-                    <ChevronRight className="w-8 h-8 md:w-10 md:h-10 text-red-700" strokeWidth={3} />
                   </div>
                 </div>
-                <ul className="grid sm:grid-cols-2 gap-6 text-gray-300">
-                  <li className="flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 delay-[100ms] group-hover:opacity-100 group-hover:translate-y-0">
-                    <span className="text-red-600 font-bold mt-1">•</span>
-                    <span className="font-light">Advanced autonomous systems and AI integration</span>
-                  </li>
-                  <li className="flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 delay-[200ms] group-hover:opacity-100 group-hover:translate-y-0">
-                    <span className="text-red-600 font-bold mt-1">•</span>
-                    <span className="font-light">Next-generation aerospace components</span>
-                  </li>
-                  <li className="flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 delay-[300ms] group-hover:opacity-100 group-hover:translate-y-0">
-                    <span className="text-red-600 font-bold mt-1">•</span>
-                    <span className="font-light">Space systems and orbital technologies</span>
-                  </li>
-                  <li className="flex items-start gap-3 opacity-0 translate-y-4 transition-all duration-500 delay-[400ms] group-hover:opacity-100 group-hover:translate-y-0">
-                    <span className="text-red-600 font-bold mt-1">•</span>
-                    <span className="font-light">Optical and laser system development</span>
-                  </li>
-                </ul>
+
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {/* Card 1 */}
+                  <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-xl border border-gray-800 hover:border-red-600/50 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                    <div className="bg-red-600/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-red-600/20 group-hover:bg-red-600 transition-colors duration-300">
+                      <Brain className="w-8 h-8 text-red-500 group-hover:text-white transition-colors" />
+                    </div>
+                    <h3 className="text-white font-bold text-lg mb-3 tracking-wide">Autonomous Systems & AI</h3>
+                    <p className="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300">
+                      Leveraging cutting-edge artificial intelligence to create self-sustaining, intelligent platforms capable of complex operational decision-making.
+                    </p>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-xl border border-gray-800 hover:border-red-600/50 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                    <div className="bg-red-600/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-red-600/20 group-hover:bg-red-600 transition-colors duration-300">
+                      <Component className="w-8 h-8 text-red-500 group-hover:text-white transition-colors" />
+                    </div>
+                    <h3 className="text-white font-bold text-lg mb-3 tracking-wide">Aerospace Components</h3>
+                    <p className="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300">
+                      Engineering lightweight, highly durable structural components designed for extreme environments and rigorous continuous payload demands.
+                    </p>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-xl border border-gray-800 hover:border-red-600/50 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                    <div className="bg-red-600/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-red-600/20 group-hover:bg-red-600 transition-colors duration-300">
+                      <Rocket className="w-8 h-8 text-red-500 group-hover:text-white transition-colors" />
+                    </div>
+                    <h3 className="text-white font-bold text-lg mb-3 tracking-wide">Space Systems</h3>
+                    <p className="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300">
+                      Pioneering specialized platforms tailored for robust orbital deployment and comprehensive deep-space operations.
+                    </p>
+                  </div>
+
+                  {/* Card 4 */}
+                  <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-xl border border-gray-800 hover:border-red-600/50 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                    <div className="bg-red-600/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-red-600/20 group-hover:bg-red-600 transition-colors duration-300">
+                      <Target className="w-8 h-8 text-red-500 group-hover:text-white transition-colors" />
+                    </div>
+                    <h3 className="text-white font-bold text-lg mb-3 tracking-wide">Optical & Laser Systems</h3>
+                    <p className="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300">
+                      Developing precise, high-fidelity electro-optical sensors and targeting systems for mission-critical environmental sensing applications.
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           ) : (
