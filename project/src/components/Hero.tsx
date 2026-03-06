@@ -7,8 +7,8 @@ export default function Hero() {
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2600&auto=format&fit=crop"
-          alt="Aerospace Context"
+          src="/Earth Photo.avif"
+          alt="Earth from space"
           className="w-full h-full object-cover opacity-70 animate-fade-in"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>

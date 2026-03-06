@@ -9,8 +9,8 @@ export default function Publications() {
         {/* Left: High-resolution desaturated image */}
         <div className="w-full md:w-1/2 relative h-[40vh] md:h-auto overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop"
-            alt="Robotic Lab & Aerospace Assembly"
+            src="/Publication.avif"
+            alt="Publications"
             className="absolute inset-0 w-full h-full object-cover grayscale opacity-80"
           />
           {/* Subtle overlay to integrate the image */}
