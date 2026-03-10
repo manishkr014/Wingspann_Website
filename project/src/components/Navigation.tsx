@@ -12,7 +12,12 @@ const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
   {
     label: 'Technology',
-    href: '/technology'
+    submenu: [
+      { label: 'UAS / Drones', href: '/technology/uas' },
+      { label: 'Space Systems', href: '/technology/space' },
+      { label: 'Aerospace Components', href: '/technology/aerospace' },
+      { label: 'Optical & Laser', href: '/technology/optical' }
+    ]
   },
   {
     label: 'Solutions',
@@ -23,12 +28,11 @@ const navItems: NavItem[] = [
     ]
   },
   { label: 'Careers', href: '/careers' },
-  { label: 'About', href: '/about/mission' },
   { label: 'Contact', href: '/contact' }
 ];
 
 const additionalLinks: { label: string; href: string }[] = [
-  { label: 'Newsroom', href: '/press' },
+  { label: 'Press & Media', href: '/press' },
   { label: 'Publications', href: '/publications' },
   { label: 'Apps', href: '/apps' }
 ];
@@ -48,7 +52,7 @@ function NavLink({ item }: NavLinkProps) {
       onMouseLeave={() => hasSubmenu && setIsOpen(false)}
     >
       {hasSubmenu ? (
-        <button className="flex items-center gap-2 py-4 px-3 sm:px-6 text-sm font-bold tracking-widest hover:opacity-70 transition-opacity group relative text-black">
+        <button className="flex items-center gap-2 py-4 px-3 sm:px-6 text-xs font-bold tracking-widest hover:opacity-70 transition-opacity group relative text-black">
           {item.label.toUpperCase()}
           <span className="text-sm font-bold">
             {isOpen ? '-' : '+'}
@@ -58,7 +62,7 @@ function NavLink({ item }: NavLinkProps) {
           ></div>
         </button>
       ) : (
-        <a href={item.href} className="flex items-center gap-2 py-4 px-3 sm:px-6 text-sm font-bold tracking-widest hover:opacity-70 transition-opacity group relative text-black">
+        <a href={item.href} className="flex items-center gap-2 py-4 px-3 sm:px-6 text-xs font-bold tracking-widest hover:opacity-70 transition-opacity group relative text-black">
           {item.label.toUpperCase()}
           <div
             className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
@@ -74,7 +78,7 @@ function NavLink({ item }: NavLinkProps) {
             <a
               key={idx}
               href={subitem.href}
-              className="block px-4 sm:px-6 py-3 text-sm font-bold tracking-widest text-black hover:bg-gray-300 transition-colors border-b border-gray-300 last:border-b-0"
+              className="block px-4 sm:px-6 py-3 text-xs font-bold tracking-widest text-black hover:bg-gray-300 transition-colors border-b border-gray-300 last:border-b-0"
             >
               {subitem.label.toUpperCase()}
             </a>
@@ -199,7 +203,7 @@ export default function Navigation() {
             <motion.img
               src="/Wingspann_W.png"
               alt="W"
-              className="absolute h-14 object-contain"
+              className="absolute h-12 object-contain"
               initial={{ x: 0, opacity: 0, scale: 0.8 }}
               animate={{
                 x: [0, -90, -90],
@@ -213,7 +217,7 @@ export default function Navigation() {
             <motion.img
               src="/Wingspann_S.png"
               alt="Block"
-              className="absolute h-14 object-contain"
+              className="absolute h-12 object-contain"
               initial={{ x: 0, opacity: 0, scale: 0.8 }}
               animate={{
                 x: [0, 90, 90],
@@ -227,7 +231,7 @@ export default function Navigation() {
             <motion.img
               src="/Wingspann Logo.png"
               alt="Wingspann Global"
-              className="h-14 pointer-events-auto"
+              className="h-12 pointer-events-auto"
               initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.95 }}
               animate={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
               transition={{ duration: 1.2, delay: 2.6, ease: "easeOut" }}
@@ -274,7 +278,7 @@ export default function Navigation() {
             transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
             src="/Wingspann Logo.png"
             alt="Wingspann Global"
-            className="h-12"
+            className="h-10"
           />
           <motion.button
             initial={{ x: 50, opacity: 0 }}

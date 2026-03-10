@@ -127,7 +127,7 @@ export default function TechnologyPage() {
               </p>
             </div>
 
-            {product.id === 'uas' ? (
+            {['uas', 'space'].includes(product.id) ? (
               <div className="group relative bg-[#0a0a0a] border border-gray-800 rounded-xl transition-all duration-300 hover:border-red-600/50 hover:shadow-2xl hover:shadow-red-900/10 overflow-hidden">
                 {/* The Header that shows always containing both Key Features & Trigger */}
                 <div className="px-8 py-8 md:px-12 md:py-10 flex flex-col lg:flex-row justify-between items-start lg:items-center cursor-pointer bg-gradient-to-r from-red-600/5 to-transparent gap-8 md:gap-4 relative z-10 bg-[#0a0a0a]">
@@ -138,7 +138,7 @@ export default function TechnologyPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-4">
                       {product.features.map((feature, fIdx) => {
                         let Icon = Zap;
-                        if (feature.includes("Autonomous")) Icon = Navigation;
+                        if (feature.includes("Autonomous") || feature.includes("Space")) Icon = Navigation;
                         else if (feature.includes("AI-powered")) Icon = Brain;
                         else if (feature.includes("Real-time")) Icon = Cpu;
                         else if (feature.includes("endurance")) Icon = Battery;
@@ -170,22 +170,32 @@ export default function TechnologyPage() {
                 <div className="max-h-0 opacity-0 group-hover:max-h-[1500px] group-hover:opacity-100 transition-all duration-[800ms] ease-[cubic-bezier(0.4,0,0.2,1)] px-6 md:px-12 pb-6 md:pb-12 border-t border-transparent group-hover:border-gray-800 flex flex-col mt-0 relative z-0">
                   {/* Details Block Only */}
                   <div className="w-full flex flex-col lg:flex-row gap-8 lg:gap-12 items-start pt-8">
-                    <div className="flex-1">
+                    <div className="flex-1 lg:w-1/3">
                       <h4 className="text-2xl font-bold text-white mb-4 uppercase tracking-wide">Product Overview</h4>
                       <p className="text-gray-400 font-light leading-relaxed mb-8 text-lg">
-                        This advanced UAS platform pushes the boundaries of modern aerospace engineering. Combining AI-driven autonomous flight control with cutting-edge real-time processing capabilities, it delivers unparalleled endurance and mission-critical reliability for enterprise and defense operations.
+                        {product.id === 'uas'
+                          ? "This advanced UAS platform pushes the boundaries of modern aerospace engineering. Combining AI-driven autonomous flight control with cutting-edge real-time processing capabilities, it delivers unparalleled endurance and mission-critical reliability for enterprise and defense operations."
+                          : "Explore our cutting-edge orbital technologies and satellite systems, designed to push the boundaries of communication, observation, and structural endurance in space."}
                       </p>
                       <button className="text-sm font-bold tracking-widest text-[#0a0a0a] bg-red-600 hover:bg-white px-8 py-4 transition-colors uppercase shadow-[0_0_20px_rgba(220,38,38,0.5)]">
                         View Full Specifications
                       </button>
                     </div>
-                    {/* Drone Image Block */}
-                    <div className="w-full lg:w-1/2 rounded-xl overflow-hidden border border-gray-800 shadow-[0_0_30px_rgba(220,38,38,0.1)] group-hover:border-red-600/30 transition-colors duration-500 flex items-center justify-center">
-                      <img
-                        src="/Screenshot%202026-03-02%20105231.png"
-                        alt="UAS Product Overview"
-                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 max-h-[400px]"
-                      />
+                    {/* Visual Media Block */}
+                    <div className={`w-full ${product.id === 'uas' ? 'lg:w-1/2' : 'lg:w-2/3'} rounded-xl overflow-hidden border border-gray-800 shadow-[0_0_30px_rgba(220,38,38,0.1)] group-hover:border-red-600/30 transition-colors duration-500 flex flex-col items-center justify-center`}>
+                      {product.id === 'uas' ? (
+                        <img
+                          src="/Screenshot%202026-03-02%20105231.png"
+                          alt="UAS Product Overview"
+                          className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 max-h-[400px]"
+                        />
+                      ) : (
+                        <div className="w-full h-[500px] grid grid-cols-1 md:grid-cols-3 gap-2 bg-gradient-to-b from-gray-900 to-black items-center justify-center p-4">
+                          <iframe src="/space-6u.html" title="6U Showcase" className="w-full h-full border-0 pointer-events-auto" style={{ opacity: 0.9 }}></iframe>
+                          <iframe src="/space-12u.html" title="12U Showcase" className="w-full h-full border-0 pointer-events-auto" style={{ opacity: 0.9 }}></iframe>
+                          <iframe src="/space-showcase.html" title="STL Showcase" className="w-full h-full border-0 pointer-events-auto" style={{ opacity: 0.9 }}></iframe>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

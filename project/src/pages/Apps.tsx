@@ -99,24 +99,6 @@ export default function Apps() {
             </div>
           ))}
         </div>
-
-        <div className="bg-gradient-to-r from-red-600/10 to-black border border-red-600/30 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold text-white mb-4">Developer Resources</h2>
-          <p className="text-gray-300 mb-6">
-            Integration APIs and SDKs available for building custom solutions on our platform.
-          </p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <button className="px-4 py-3 border border-red-600 text-red-600 hover:bg-red-600/10 font-semibold rounded transition-colors">
-              API Documentation
-            </button>
-            <button className="px-4 py-3 border border-red-600 text-red-600 hover:bg-red-600/10 font-semibold rounded transition-colors">
-              SDK Downloads
-            </button>
-            <button className="px-4 py-3 border border-red-600 text-red-600 hover:bg-red-600/10 font-semibold rounded transition-colors">
-              Developer Portal
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

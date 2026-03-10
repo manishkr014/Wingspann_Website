@@ -55,7 +55,7 @@ export default function Publications() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Birla Institute of Technology Mesra",
+                name: "Birla Institute of Technology, Mesra",
                 location: "Ranchi, India",
                 image: "/BIT-Mesra.png",
               },
@@ -65,14 +65,14 @@ export default function Publications() {
                 image: "/Sampetheton.png",
               },
               {
-                name: "MIT",
+                name: "Massachusetts Institute of Technology",
                 location: "Cambridge, USA",
                 image: "/MIT.jpg",
               },
             ].map((uni, idx) => (
               <div
                 key={idx}
-                className="relative overflow-hidden rounded-xl border border-white/10 p-8 flex flex-col justify-end min-h-[340px] transition-transform duration-500 hover:-translate-y-2 group"
+                className="relative overflow-hidden rounded-xl border border-white/10 p-6 sm:p-8 flex flex-col justify-end min-h-[400px] transition-transform duration-500 hover:-translate-y-2 group"
                 // Glassmorphism background
                 style={{
                   background: "rgba(255, 255, 255, 0.05)",
@@ -88,7 +88,7 @@ export default function Publications() {
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full justify-end">
-                  <h3 className="text-3xl font-bold text-white mb-1 tracking-wide">
+                  <h3 className="text-2xl font-bold text-white mb-2 tracking-wide leading-snug">
                     {uni.name}
                   </h3>
                   <p className="text-gray-400 text-sm tracking-widest uppercase mb-8">
@@ -96,10 +96,10 @@ export default function Publications() {
                   </p>
 
                   <div>
-                    {/* Gold/Yellow action button (#D4AF37) */}
+                    {/* Primary red action button matching global theme */}
                     <a
                       href="#"
-                      className="inline-block bg-[#D4AF37] hover:bg-white text-black font-semibold tracking-widest py-3 px-6 text-xs transition-colors duration-300 shadow-xl shadow-[#D4AF37]/10"
+                      className="inline-block text-center text-sm font-bold tracking-widest text-[#0a0a0a] bg-red-600 hover:bg-white px-8 py-3 transition-colors uppercase shadow-[0_0_20px_rgba(220,38,38,0.5)]"
                     >
                       VIEW PROJECT
                     </a>
