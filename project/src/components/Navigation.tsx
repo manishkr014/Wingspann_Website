@@ -11,20 +11,14 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Technology', href: '/technology' },
-  {
-    label: 'Solutions',
-    submenu: [
-      { label: 'Industry', href: '/solutions/industry' },
-      { label: 'Government', href: '/solutions/government' },
-      { label: 'Research', href: '/solutions/research' }
-    ]
-  },
+  { label: 'Solutions', href: '/solutions' },
   { label: 'Careers', href: '/careers' },
+  { label: 'About', href: '/about/mission' },
   { label: 'Contact', href: '/contact' }
 ];
 
 const additionalLinks: { label: string; href: string }[] = [
-  { label: 'Press & Media', href: '/press' },
+  { label: 'Newsroom', href: '/press' },
   { label: 'Publications', href: '/publications' },
   { label: 'Apps', href: '/apps' }
 ];

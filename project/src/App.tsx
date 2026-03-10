@@ -40,9 +40,7 @@ function App() {
                 <Route path="/about/mission" element={<About />} />
                 <Route path="/about/vision" element={<About />} />
                 <Route path="/technology" element={<TechnologyPage />} />
-                <Route path="/solutions/industry" element={<Solutions />} />
-                <Route path="/solutions/government" element={<Solutions />} />
-                <Route path="/solutions/research" element={<Solutions />} />
+                <Route path="/solutions" element={<Solutions />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/press" element={<Press />} />
                 <Route path="/publications" element={<Publications />} />

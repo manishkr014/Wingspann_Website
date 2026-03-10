@@ -76,7 +76,7 @@ export default function TechnologyPage() {
       icon: "🔬",
     },
     {
-      name: "Sensor Integration",
+      name: "Sensor Fusion",
       description:
         "Multi-sensor fusion technology combining LiDAR, cameras, and thermal imaging for comprehensive situational awareness.",
       icon: "📡",
