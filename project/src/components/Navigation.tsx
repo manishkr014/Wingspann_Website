@@ -10,15 +10,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
-  {
-    label: 'Technology',
-    submenu: [
-      { label: 'UAS / Drones', href: '/technology/uas' },
-      { label: 'Space Systems', href: '/technology/space' },
-      { label: 'Aerospace Components', href: '/technology/aerospace' },
-      { label: 'Optical & Laser', href: '/technology/optical' }
-    ]
-  },
+  { label: 'Technology', href: '/technology' },
   {
     label: 'Solutions',
     submenu: [
